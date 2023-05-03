@@ -142,20 +142,23 @@ app.listen(5000, () => console.log("login server running.............."));
 // file upload code
 const storage = multer.diskStorage({
   destination: function (req, file, callBack) {
-    if (!fs.existsSync(__dirname + "/temp")) {
-      fs.mkdirSync(__dirname + "/temp");
+    if (!fs.existsSync("./temp")) {
+      fs.mkdirSync("./temp");
     }
-    callBack(null, "/.temp");
+    callBack(null, "./temp");
   },
   filename: function (req, file, callBack) {
     callBack(
       null,
-      file.filename + "-" + Date.now() + "." + file.mimetype.split("/")[1]
+      file.originalname + "-" + Date.now() + "." + file.mimetype.split("/")[1]
     );
   },
 });
-const upload = multer(storage);
-app.get("/upload", upload.single("file"), async (req, res) => {
-  console.log("file", req.file);
-  res.json({ status: "ok file upladed successfully", data: req.file });
+
+const upload = multer({ storage: storage });
+
+app.get("/upload", upload.array("file"), async (req, res) => {
+  console.log("file", req.files);
+  console.log(res.json);
+  res.json({ status: "ok file upladed successfully", data: req.files });
 });
