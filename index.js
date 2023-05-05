@@ -162,3 +162,96 @@ app.get("/upload", upload.array("file"), async (req, res) => {
   console.log(res.json);
   res.json({ status: "ok file upladed successfully", data: req.files });
 });
+
+// files operations
+fs.unlink("./topics1.txt", (err, data) => {
+  if (err) {
+    console.log(err, "file deletion failed");
+  } else {
+    console.log("successfully deleted");
+  }
+});
+fs.writeFile("./topics.txt", "updating through program", (err, data) => {
+  if (err) {
+    console.log(err, "file written failed");
+  } else {
+    console.log("successfully written", data);
+  }
+});
+fs.appendFile("./topics1.txt", "added through program", (err, data) => {
+  if (err) {
+    console.log(err, "file written failed");
+  } else {
+    console.log("successfully written");
+  }
+});
+fs.readFileSync("./topics.txt", (err, data) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(data.toString(), "is the text in the txt file");
+  }
+});
+
+fs.mkdir("./test", (err) => {
+  if (err) {
+    console.log("alredy exists");
+  } else {
+    console.log("created successfully!!!!");
+  }
+});
+setTimeout(() => {
+  fs.rmdir("./test", (err) => {
+    if (err) {
+      console.log("folder deletion success");
+    } else {
+      console.log("deleted successfully!!!!");
+    }
+  });
+}, 5000);
+setTimeout(() => {
+  fs.readdir("./test", (err, data) => {
+    if (err) {
+      console.log("folder deletion success");
+    } else {
+      console.log("deleted successfully!!!!");
+      console.log(data);
+    }
+  });
+}, 6000);
+console.log("before reading"); //async task
+fs.readdir("./test", (err, data) => {
+  if (err) {
+    console.log("read of folder not success");
+  } else {
+    console.log("reading of folder success");
+    console.log(data);
+    for (f of data) {
+      fs.readdir("./test/" + f, (err, subdata) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(subdata);
+        }
+      });
+    }
+  }
+});
+
+// using api
+
+app.get("/api/files", (req, res) => {
+  const dirPath = path.join(__dirname, "my-directory");
+  fs.readdir(dirPath, (err, files) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send("Internal Server Error");
+      return;
+    }
+    res.json(files);
+  });
+});
+
+app.listen(9000, () => {
+  console.log("Server started on port 9000 for file systems......");
+});
