@@ -1,1 +1,6 @@
 updating through program
+1. read data from the file.
+2. update data to the file.
+3. write data to the file.
+4. get data from the file
+5. delete data from the file.
