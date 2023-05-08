@@ -1,0 +1,119 @@
+[debug] [2023-05-05T09:16:11.485Z] ----------------------------------------------------------------------
+[debug] [2023-05-05T09:16:11.486Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DoradlaHari\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-05-05T09:16:11.487Z] CLI Version:   11.30.0
+[debug] [2023-05-05T09:16:11.487Z] Platform:      win32
+[debug] [2023-05-05T09:16:11.487Z] Node Version:  v18.12.0
+[debug] [2023-05-05T09:16:11.488Z] Time:          Fri May 05 2023 14:46:11 GMT+0530 (India Standard Time)
+[debug] [2023-05-05T09:16:11.488Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-05T09:16:11.548Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-05T09:16:11.548Z] > authorizing via signed-in user (doradla.hari@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\mern-typescript\nodejs\travelling-app
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-05-05T09:16:47.433Z] Using project from CLI flag: nodejs-api-751cb
+[debug] [2023-05-05T09:16:47.434Z] > refreshing access token with scopes: []
+[debug] [2023-05-05T09:16:47.436Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-05-05T09:16:47.436Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-05T09:16:47.752Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-05-05T09:16:47.752Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-05T09:16:47.766Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nodejs-api-751cb [none]
+[debug] [2023-05-05T09:16:48.366Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nodejs-api-751cb 200
+[debug] [2023-05-05T09:16:48.367Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nodejs-api-751cb {"projectId":"nodejs-api-751cb","projectNumber":"80423851514","displayName":"nodejs-api","name":"projects/nodejs-api-751cb","resources":{"hostingSite":"nodejs-api-751cb"},"state":"ACTIVE","etag":"1_debbee47-9fad-4fdc-a2db-0f06d2294a97"}
+[info] i  Using project nodejs-api-751cb (nodejs-api) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at D:\mern-typescript\nodejs\travelling-app 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=857336850&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-05T09:16:49.102Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-05-05T09:16:49.102Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-05-05T09:16:49.504Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-05-05T09:16:49.504Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-05-05T09:16:49.510Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-05-05T09:16:49.954Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-05-05T09:16:49.954Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"doradlahari","id":87358195,"node_id":"MDQ6VXNlcjg3MzU4MTk1","avatar_url":"https://avatars.githubusercontent.com/u/87358195?v=4","gravatar_id":"","url":"https://api.github.com/users/doradlahari","html_url":"https://github.com/doradlahari","followers_url":"https://api.github.com/users/doradlahari/followers","following_url":"https://api.github.com/users/doradlahari/following{/other_user}","gists_url":"https://api.github.com/users/doradlahari/gists{/gist_id}","starred_url":"https://api.github.com/users/doradlahari/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/doradlahari/subscriptions","organizations_url":"https://api.github.com/users/doradlahari/orgs","repos_url":"https://api.github.com/users/doradlahari/repos","events_url":"https://api.github.com/users/doradlahari/events{/privacy}","received_events_url":"https://api.github.com/users/doradlahari/received_events","type":"User","site_admin":false,"name":"Doradla Hari","company":null,"blog":"https://www.behance.net/doradlahari","location":null,"email":null,"hireable":true,"bio":"I am UI/UX designer, fresher in the field of UI/UX design role My present goals are always is an onshore project to design the products such as app and website ","twitter_username":null,"public_repos":4,"public_gists":0,"followers":0,"following":2,"created_at":"2021-07-13T06:49:12Z","updated_at":"2023-05-01T05:07:23Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":30063,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as doradlahari 
+[info] 
+[debug] [2023-05-05T09:22:58.812Z] ----------------------------------------------------------------------
+[debug] [2023-05-05T09:22:58.813Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DoradlaHari\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-05-05T09:22:58.814Z] CLI Version:   11.30.0
+[debug] [2023-05-05T09:22:58.814Z] Platform:      win32
+[debug] [2023-05-05T09:22:58.814Z] Node Version:  v18.12.0
+[debug] [2023-05-05T09:22:58.815Z] Time:          Fri May 05 2023 14:52:58 GMT+0530 (India Standard Time)
+[debug] [2023-05-05T09:22:58.815Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-05T09:22:58.874Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-05T09:22:58.874Z] > authorizing via signed-in user (doradla.hari@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\mern-typescript\nodejs\travelling-app
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-05-05T09:23:09.673Z] Using project from CLI flag: nodejs-api-751cb
+[debug] [2023-05-05T09:23:09.675Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nodejs-api-751cb [none]
+[debug] [2023-05-05T09:23:10.270Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nodejs-api-751cb 200
+[debug] [2023-05-05T09:23:10.270Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nodejs-api-751cb {"projectId":"nodejs-api-751cb","projectNumber":"80423851514","displayName":"nodejs-api","name":"projects/nodejs-api-751cb","resources":{"hostingSite":"nodejs-api-751cb"},"state":"ACTIVE","etag":"1_debbee47-9fad-4fdc-a2db-0f06d2294a97"}
+[info] i  Using project nodejs-api-751cb (nodejs-api) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at D:\mern-typescript\nodejs\travelling-app 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=206858906&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-05T09:23:10.974Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-05-05T09:23:10.974Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-05-05T09:23:11.444Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-05-05T09:23:11.444Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-05-05T09:23:11.450Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-05-05T09:23:11.876Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-05-05T09:23:11.876Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"doradlahari","id":87358195,"node_id":"MDQ6VXNlcjg3MzU4MTk1","avatar_url":"https://avatars.githubusercontent.com/u/87358195?v=4","gravatar_id":"","url":"https://api.github.com/users/doradlahari","html_url":"https://github.com/doradlahari","followers_url":"https://api.github.com/users/doradlahari/followers","following_url":"https://api.github.com/users/doradlahari/following{/other_user}","gists_url":"https://api.github.com/users/doradlahari/gists{/gist_id}","starred_url":"https://api.github.com/users/doradlahari/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/doradlahari/subscriptions","organizations_url":"https://api.github.com/users/doradlahari/orgs","repos_url":"https://api.github.com/users/doradlahari/repos","events_url":"https://api.github.com/users/doradlahari/events{/privacy}","received_events_url":"https://api.github.com/users/doradlahari/received_events","type":"User","site_admin":false,"name":"Doradla Hari","company":null,"blog":"https://www.behance.net/doradlahari","location":null,"email":null,"hireable":true,"bio":"I am UI/UX designer, fresher in the field of UI/UX design role My present goals are always is an onshore project to design the products such as app and website ","twitter_username":null,"public_repos":4,"public_gists":0,"followers":0,"following":2,"created_at":"2021-07-13T06:49:12Z","updated_at":"2023-05-01T05:07:23Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":30063,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as doradlahari 
+[info] 
